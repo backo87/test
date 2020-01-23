@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.korea.k117.mapper.SchoolDAO">
+	<select id="selectSchool"  resultType="com.korea.k117.domian.SchoolVo">
+		select  *  from  school0117
+	</select>
+	<insert id="insertSchool">
+		<![CDATA[
+			insert into school0117(sno,sname,email) values(#{sno},#{sname},#{email})
+		]]>
+	</insert>
+	<delete id="deleteSchool">
+		<![CDATA[
+			delete from school0117 where sno=#{sno}
+		]]>
+	</delete>
+	<select id="search" resultType="com.korea.k117.domian.SchoolVo">
+		<![CDATA[
+			select  * from school0117 where ${sel} like '%'||#{value}||'%'
+		]]>
+	</select>
+</mapper>
