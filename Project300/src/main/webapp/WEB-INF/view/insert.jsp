@@ -15,6 +15,7 @@
 	<td>번 호</td><td><input type="text" name="sno"></td>
 </tr>
 <tr>
+
 	<td>이 름</td><td><input type="text" name="sname"></td>
 </tr>
 <tr>
